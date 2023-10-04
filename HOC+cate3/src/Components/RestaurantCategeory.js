@@ -4,9 +4,9 @@ import ItemList from './ItemList'
 const RestaurantCategeory = ({data}) => {
   const [showItem,setShowItems]= useState(false)
  const handleItems=()=>{
-  // setShowItems(true)
+   //setShowItems(true)
   setShowItems(!showItem)
-  // console.log("clicked")
+// console.log("clicked")
  }
   return (
   

@@ -2,6 +2,7 @@ import React from "react";
 import ItemList from "./ItemList";
 
 const RestaurantCategeory = ({ data }) => {
+  console.log(data)
 
   const handleClick=()=>{
     console.log("clicked")
