@@ -1,0 +1,74 @@
+css file 
+bootstarp 
+sass 
+scss 
+material ui 
+ant design 
+chakra ui 
+TAILWIND CSS 
+
+
+srp (single responsibility principle)
+resuable 
+maintainable
+testable 
+
+// custom hooks 
+
+
+chuncking
+code splitting 
+dynamic bundling 
+lazy loading 
+
+
+
+resuable 
+maintainable 
+testable
+
+
+funtion sum(a,b){
+ return a+b
+}
+
+sum(3,4)
+
+
+
+custom Hook 
+
+hook is nothing but a normal js utility funtion or helper functions 
+
+srp -->
+creating custom hooks is not mandatory but good thing to create 
+
+
+
+What is react Hook 
+
+react hook is a normal javascript utility function
+
+customHooks is it mandatory ? ....no .... 
+
+useState --> state management  const [initial, setInitial] = useState()
+useEffect ..... i will perform side effects (like api calls , event listners,...)
+
+
+
+RestaurantMenu 
+
+
+to get data from api call using useEffect and resId
+to set the data to resInfo using useState 
+to display in the data of resinfo to ui 
+
+
+rules of writing custom hooks 
+
+start with use keyword 
+
+need to finalize the contract (what is input and what is output )
+
+
+file watcher algorithm 
