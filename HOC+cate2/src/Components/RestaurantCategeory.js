@@ -2,7 +2,7 @@ import React from "react";
 import ItemList from "./ItemList";
 
 const RestaurantCategeory = ({ data }) => {
-  console.log(data)
+  //console.log(data)
 
   const handleClick=()=>{
     console.log("clicked")
@@ -14,12 +14,14 @@ const RestaurantCategeory = ({ data }) => {
         <span className="font-bold text-lg">
           {data.title} ({data.itemCards.length})
         </span>
-        <span>⬇️ </span>
+        <span>⬇️</span>
       </div>
 
-      <ItemList items={data.itemCards} />
+     <ItemList items={data.itemCards} /> 
     </div>
   );
 };
 
 export default RestaurantCategeory;
+
+
