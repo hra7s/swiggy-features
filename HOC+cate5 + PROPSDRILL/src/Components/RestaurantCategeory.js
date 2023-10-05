@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ItemList from './ItemList'
 
-const RestaurantCategeory = ({data,showItem,setShowIndex}) => {
+const RestaurantCategeory = ({data,showItem,setShowIndex,dummy}) => {
   // const [showItem,setShowItems]= useState(false)
  const handleItems=()=>{
   setShowIndex()
@@ -17,7 +17,7 @@ const RestaurantCategeory = ({data,showItem,setShowIndex}) => {
         <span>⬇️ </span>
     </div>
         
-        {showItem && <ItemList items={data.itemCards}/>}
+        {showItem && <ItemList items={data.itemCards} dummy={dummy}/>}
       </div>
        
  
