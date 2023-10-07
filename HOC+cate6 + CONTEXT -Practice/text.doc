@@ -24,4 +24,4 @@ lazy loading
 
 
 by using ReactContext we can avoid prop drilling 
-we can use useContext which is a kind of global place. where your data is kept where any body can access it.
+we cam use useContext which is a kind of global place. where your data is kept where any body can access it.

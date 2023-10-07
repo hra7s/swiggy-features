@@ -6,6 +6,8 @@ import RestaurantCategeory from "./RestaurantCategeory";
 
 const RestaurantMenu = () => {
 
+  const data="DummyData"
+
   const { resId } = useParams();
 
   const [showIndex,setShowIndex]=useState(null)
@@ -20,7 +22,7 @@ const RestaurantMenu = () => {
 
   const { name, cuisines, costForTwo } =
     resInfo?.data.cards[0]?.card?.card?.info;
-  console.log(resInfo);
+
 
   const categories =
     resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
@@ -43,9 +45,10 @@ const RestaurantMenu = () => {
         <RestaurantCategeory
           key={category.card.card.title}
           data={category.card.card}
-        // showItem={index===0 ? true: false }
-         showItem={index===showIndex? true:false}
+          // showItem={index===1 ? true: false }
+          showItem={index===showIndex? true:false}
           setShowIndex={()=>setShowIndex(index)}
+          dummy={data}
         />
       ))}
     </div>
@@ -53,5 +56,3 @@ const RestaurantMenu = () => {
 };
 
 export default RestaurantMenu;
-
-

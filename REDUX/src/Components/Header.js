@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 import { LOGO_URL } from "../utils/constants";
 import "../../index.css";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import Abc from "../utils/Abc";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const [btnReact, setBtnReact] = useState("Login");
 
   const onlineStatus = useOnlineStatus();
 
-  const {loggedInUser}=useContext(Abc)
+  const {loggedInUser}=useContext(UserContext)
   //when ever state variable updates react rerenders /
   useEffect(() => {
     // console.log("useEffect Called");

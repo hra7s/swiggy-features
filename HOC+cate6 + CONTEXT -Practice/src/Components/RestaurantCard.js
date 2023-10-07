@@ -1,10 +1,9 @@
 import React, { useContext } from "react"
 import { CDN_URL } from "../utils/constants"
-import Abc from "../utils/Abc"
-// import UserContext from "../utils/UserContext"
+import UserContext from "../utils/UserContext"
 
 const RestaurentCard=(props)=>{
- const {loggedInUser} = useContext(Abc)
+    const {loggedInUser} = useContext(UserContext)
     const {resData} =props
     const {cloudinaryImageId,name,avgRating,cuisines,costForTwo,sla}= resData?.info
     //optional chaining
@@ -17,7 +16,7 @@ const RestaurentCard=(props)=>{
            
             <h3>{costForTwo}</h3>
             <h4>{sla?.deliveryTime} minutes</h4>
-        <h6>{loggedInUser}</h6> 
+            <h6>{loggedInUser}</h6>
             </div>
         )
    

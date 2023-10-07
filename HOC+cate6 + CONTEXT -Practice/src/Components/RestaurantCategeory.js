@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import ItemList from './ItemList'
 
-const RestaurantCategeory = ({data}) => {
-  const [showItem,setShowItems]= useState(false)
+const RestaurantCategeory = ({data,showItem,setShowIndex,dummy}) => {
+  // const [showItem,setShowItems]= useState(false)
  const handleItems=()=>{
-  //setShowItems(!showItem)
-  setShowItems(!showItem)
-//console.log("clicked")
+  setShowIndex()
+  // setShowItems(true)
+  // setShowItems(!showItem)
+  // console.log("clicked")
  }
   return (
   
@@ -16,7 +17,7 @@ const RestaurantCategeory = ({data}) => {
         <span>⬇️ </span>
     </div>
         
-    {showItem && <ItemList items={data.itemCards}/>}
+        {showItem && <ItemList items={data.itemCards} dummy={dummy}/>}
       </div>
        
  

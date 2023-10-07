@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { CDN_URL } from "../utils/constants";
+import Abc from "../utils/Abc";
 const ItemList = ({ items,dummy }) => {
   
+  const {loggedInUser}= useContext(Abc)
 
   return (
     <div>
@@ -15,6 +17,7 @@ const ItemList = ({ items,dummy }) => {
           <div className="w-9/12">
             <div className="py-2">
               <span>{item.card.info.name} </span>
+              <span>{loggedInUser}</span>
               <span>
                 💵
                 {item.card.info.price

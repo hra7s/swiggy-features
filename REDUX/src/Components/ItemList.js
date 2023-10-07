@@ -1,7 +1,7 @@
 import React from "react";
 import { CDN_URL } from "../utils/constants";
 const ItemList = ({ items,dummy }) => {
-  console.log(dummy)
+  
 
   return (
     <div>
@@ -15,8 +15,6 @@ const ItemList = ({ items,dummy }) => {
           <div className="w-9/12">
             <div className="py-2">
               <span>{item.card.info.name} </span>
-              <p>{dummy}</p>
-              
               <span>
                 💵
                 {item.card.info.price
