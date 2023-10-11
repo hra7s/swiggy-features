@@ -13,7 +13,7 @@ import RestaurantMenu from './Components/RestaurantMenu';
 import RestaurentCard from './Components/RestaurantCard';
 import UserContext from './utils/UserContext';
 
-import {Provider} from "react-redux  "
+import {Provider} from "react-redux"
 import appStore from './utils/store/appStore';
 //import Grocery from './Components/Grocery'
 

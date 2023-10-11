@@ -34,3 +34,23 @@ const vegLabel=(Component)=>{
         )
     }
 }
+
+
+
+
+higher order funtion which takes a another function as an argument is called higher order function 
+
+call back function means when we pass a function as an argument to nother function is called call back 
+
+
+
+let a=[]
+a.map(()=>{}
+map  reduce and filter are higher 
+
+
+higher order component 
+
+it takes component as an argument and return another component with enahanced features
+
+

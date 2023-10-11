@@ -5,18 +5,24 @@ import { LOGO_URL } from "../utils/constants";
 import "../../index.css";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import {useSelector} from "react-redux";
 
 const Header = () => {
   const [btnReact, setBtnReact] = useState("Login");
 
   const onlineStatus = useOnlineStatus();
 
+
+
   const {loggedInUser}=useContext(UserContext)
   //when ever state variable updates react rerenders /
   useEffect(() => {
     // console.log("useEffect Called");
   }, [btnReact]);
+ 
+  // we are subscribing to store using a hook
 
+  const cartItems= useSelector((store)=>store.cart.items)
   // const btnReact="Login"
   return (
     <div className="flex justify-between bg-amber-300 lg:bg-orange-200 shadow-lg ">
@@ -41,7 +47,7 @@ const Header = () => {
           <li className="px-4">
             <Link to="/grocery"> Grocery</Link>
           </li>
-          <li className="px-4">Cart</li>
+          <li className="px-4 text-xl font-bold">Cart- {cartItems.length} items</li>
           <button
             className="login"
             onClick={() => {

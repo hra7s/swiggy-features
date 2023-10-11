@@ -6,6 +6,8 @@ import RestaurantCategeory from "./RestaurantCategeory";
 
 const RestaurantMenu = () => {
 
+  const data="DummyData"
+
   const { resId } = useParams();
 
   const [showIndex,setShowIndex]=useState(null)
@@ -20,7 +22,7 @@ const RestaurantMenu = () => {
 
   const { name, cuisines, costForTwo } =
     resInfo?.data.cards[0]?.card?.card?.info;
-  console.log(resInfo);
+
 
   const categories =
     resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
@@ -40,15 +42,13 @@ const RestaurantMenu = () => {
         {costForTwo / 100}
       </p>
       {categories.map((category,index) => (
-
-        // here restaurantcategeory is controlled by res menu . so rescate is called controlled component
-        // rescat is uncontrolled component  when it maintains it their own state
         <RestaurantCategeory
           key={category.card.card.title}
           data={category.card.card}
-         //showItem={index===5 ? true: false }
-         showItem={index===showIndex? true:false}
-         setShowIndex={()=>setShowIndex(index)}
+          // showItem={index===1 ? true: false }
+          showItem={index===showIndex? true:false}
+          setShowIndex={()=>setShowIndex(index)}
+          dummy={data}
         />
       ))}
     </div>
@@ -56,5 +56,3 @@ const RestaurantMenu = () => {
 };
 
 export default RestaurantMenu;
-
-

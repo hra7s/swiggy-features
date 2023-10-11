@@ -29,7 +29,7 @@ const App= ()=>{
 
     useEffect(()=>{
         const data={
-            name:"welcome Phani"
+            name:"Hello world"
         }
 
         setUserInfo(data.name)
@@ -39,9 +39,13 @@ const App= ()=>{
     return (
         <UserContext.Provider value={{loggedInUser:userInfo}}>
         <div className="app">
-        <UserContext.Provider value={{loggedInUser:"susmitha"}}>
+         <UserContext.Provider value={{loggedInUser:"welcome to swiggy"}}> 
         <Header />
-   </UserContext.Provider>
+     </UserContext.Provider> 
+      
+       
+      
+   
         <Outlet />
         </div>
         </UserContext.Provider>

@@ -12,6 +12,10 @@ import Error from './Components/Error';
 import RestaurantMenu from './Components/RestaurantMenu';
 import RestaurentCard from './Components/RestaurantCard';
 import UserContext from './utils/UserContext';
+import Cart from './Components/Cart';
+
+import {Provider} from "react-redux"
+import appStore from './utils/store/appStore';
 //import Grocery from './Components/Grocery'
 
 
@@ -42,18 +46,17 @@ const App= ()=>{
 
 
     return (
+        <Provider store={appStore}>
         <UserContext.Provider value={{loggedInUser:userInfo, setUserInfo}}>
               <div className="app">
-              
-              <UserContext.Provider value={{loggedInUser:"welcome Phani"}}>
+              <UserContext.Provider value={{loggedInUser: userInfo}}>
               <Header />
               </UserContext.Provider>
-             
-              
         
         <Outlet />
         </div>
         </UserContext.Provider>
+        </Provider>
       
     )
 }
@@ -83,6 +86,10 @@ const App= ()=>{
             {
                 path:"/restaurants/:resId",
                 element :<RestaurantMenu/>
+            },
+            {
+                path:"/cart",
+                element: <Cart />
             }
         ],
         errorElement : <Error />

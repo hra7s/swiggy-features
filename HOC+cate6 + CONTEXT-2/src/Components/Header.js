@@ -25,6 +25,7 @@ const Header = () => {
       </div>
       <div className="navItems">
         <ul className="flex items-center p-4 m-4">
+        <li className="px-4">{loggedInUser}</li>
           <li className="px-4">Online Status :{onlineStatus ? "🟢" : "🔴"}</li>
           <li className="px-4">
             {" "}
@@ -52,7 +53,7 @@ const Header = () => {
           >
             {btnReact}
           </button>
-          <li className="px-4">{loggedInUser}</li>
+          
         </ul>
         {/* {console.log("inside header")} */}
       </div>
