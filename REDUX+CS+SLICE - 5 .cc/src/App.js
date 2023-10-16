@@ -7,7 +7,7 @@ import Menu from './Components/Menu';
 //import About from './Components/About';
 import {createBrowserRouter,Outlet,RouterProvider} from 'react-router-dom';
 import '../index.css'
-import Contact from './Components/Contact';
+// import Contact from './Components/Contact';
 import Error from './Components/Error';
 import RestaurantMenu from './Components/RestaurantMenu';
 import RestaurentCard from './Components/RestaurantCard';
@@ -27,6 +27,8 @@ import appStore from './utils/store/appStore';
 const Grocery=lazy(()=> import("./Components/Grocery.js"));
 
 const About=lazy(()=> import("./Components/About.js"));
+
+const Contact=lazy(()=>import("./Components/Contact.js"))
 
 const App= ()=>{
   
@@ -76,7 +78,7 @@ const App= ()=>{
             },
             {
                 path:'/contact',
-                element : <Contact/>
+                element : <Suspense fallback={<h1>Loading...</h1>}><Contact/></Suspense>
             },
             {
                 path:"/grocery",

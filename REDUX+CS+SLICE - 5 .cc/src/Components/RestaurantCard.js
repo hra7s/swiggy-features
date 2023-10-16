@@ -53,3 +53,7 @@ export const withVegLabel= (RestaurentCard)=>{
 
 
 export default RestaurentCard
+
+
+
+

@@ -4,7 +4,7 @@ import useRestaurantMenu from "../utils/useRestaurantMenu";
 import { useParams } from "react-router-dom";
 
 const RestaurantMenu = () => {
-  // const [resInfo, setResInfo]= useState(null);
+  //const [resInfo, setResInfo]= useState(null);
   //  const params= useParams();
   //  console.log(params)
   const { resId } = useParams();
