@@ -24,8 +24,7 @@ const Header = () => {
       <div className="navItems">
         <ul className="flex items-center p-4 m-4">
           <li className="px-4">Online Status :{onlineStatus ? "🟢" : "🔴"}</li>
-          <li className="px-4">
-            {" "}
+          <li className="px-4 ">
             <Link to="/"> Home</Link>
           </li>
           <li className="px-4">

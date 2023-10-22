@@ -13,6 +13,7 @@ const Header = () => {
 
   //useContext is used to acces the data from gobal store
   const {loggedInUser}=useContext(Abc)
+  console.log(loggedInUser)
   //when ever state variable updates react rerenders /
   useEffect(() => {
     // console.log("useEffect Called");

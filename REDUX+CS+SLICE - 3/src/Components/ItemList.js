@@ -7,9 +7,9 @@ const ItemList = ({ items,dummy }) => {
   
 const dispatch= useDispatch();
 const handleAddItem=()=>{
-  console.log("clicked")
+ // console.log("clicked")
   // dispatch an action
-  dispatch(addItem("naun"))
+  dispatch(addItem("birayni"))
 
 }
   return (

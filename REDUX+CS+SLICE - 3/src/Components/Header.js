@@ -23,7 +23,7 @@ const Header = () => {
   // we are subscribing to store using a hook
   
   const cartItems= useSelector((store)=>store.cart.items)
-  console.log(cartItems)
+  console.log(cartItems)// ["b","c"]
   // const btnReact="Login"
   return (
     <div className="flex justify-between bg-amber-300 lg:bg-orange-200 shadow-lg ">

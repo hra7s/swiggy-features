@@ -114,7 +114,7 @@ const Body = () => {
           }}
         >
           Top Rated Restaurant
-        </button>
+</button>
 </div>
        
       </div>

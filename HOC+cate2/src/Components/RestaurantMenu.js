@@ -43,12 +43,12 @@ const resInfo= useRestaurantMenu(resId)
 
 
   const { name,cuisines,costForTwo} =resInfo?.data.cards[0]?.card?.card?.info
-console.log(resInfo)
+//console.log(resInfo)
 
 
 const categories= resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=>c.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
 
-
+// console.log(categories)
 
   return  (resInfo===null)?<Shimmer/>:(
     <div className='text-center'>

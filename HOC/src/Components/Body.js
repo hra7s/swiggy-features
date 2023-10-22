@@ -3,9 +3,8 @@ import { useState, useEffect } from "react";
 // import resList from "../utils/mockData"
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
-import RestaurentCard, {withVegLabel} from "./RestaurantCard";
+import RestaurentCard, { withVegLabel } from "./RestaurantCard";
 import useOnlineStatus from "../utils/useOnlineStatus";
-
 
 // chucking
 //code splitting
@@ -17,9 +16,9 @@ const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
 
-  console.log(listOfRestaurant)
+  console.log(listOfRestaurant);
 
-  const RestaurentCardVeg= withVegLabel(RestaurentCard)
+  const RestaurentCardVeg = withVegLabel(RestaurentCard);
 
   useEffect(() => {
     fetchData();
@@ -91,7 +90,8 @@ const Body = () => {
               setSearchText(e.target.value);
             }}
           />
-          <button className="px-4 m-4 py-1 rounded-lg bg-blue-300"
+          <button
+            className="px-4 m-4 py-1 rounded-lg bg-blue-300"
             onClick={() => {
               const filteredRestaurant = listOfRestaurant.filter((res) =>
                 res.info.name.toUpperCase().includes(searchText.toUpperCase())
@@ -104,30 +104,33 @@ const Body = () => {
             Search
           </button>
         </div>
-<div className="m-4 p-4 flex items-center">
-<button
-          className="px-4 py-2 rounded-2xl bg-blue-200"
-          onClick={() => {
-            console.log("clicked");
-            //filter logic need to write here
-            let filteredList = filteredRestaurant.filter(
-              (resData) => resData?.info?.avgRating >= 4
-            );
-            // setListOfRestaurant(filteredList);
-            setFilteredRestaurant(filteredList);
-            console.log(filteredList);
-          }}
-        >
-          Top Rated Restaurant
-        </button>
-</div>
-       
+        <div className="m-4 p-4 flex items-center">
+          <button
+            className="px-4 py-2 rounded-2xl bg-blue-200"
+            onClick={() => {
+              console.log("clicked");
+              //filter logic need to write here
+              let filteredList = filteredRestaurant.filter(
+                (resData) => resData?.info?.avgRating >= 4
+              );
+              // setListOfRestaurant(filteredList);
+              setFilteredRestaurant(filteredList);
+              console.log(filteredList);
+            }}
+          >
+            Top Rated Restaurant
+          </button>
+        </div>
       </div>
       <div className="flex flex-wrap">
         {/* when ever you are looping you need to pass a key  */}
         {filteredRestaurant.map((restaurant) => (
           <Link to={"./restaurants/" + restaurant?.info?.id}>
-         { restaurant.info.veg ? (<RestaurentCardVeg key={restaurant.info.i} resData={restaurant} /> ):( <RestaurentCard key={restaurant?.info?.id} resData={restaurant} />)}
+            {restaurant.info.veg ? (
+              <RestaurentCardVeg key={restaurant.info.id} resData={restaurant} />
+            ) : (
+              <RestaurentCard key={restaurant?.info?.id} resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>

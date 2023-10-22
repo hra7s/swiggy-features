@@ -17,7 +17,7 @@ const RestaurantCategeory = ({ data }) => {
         <span>⬇️</span>
       </div>
 
-     <ItemList items={data.itemCards} />  
+     <ItemList items={data.itemCards} />   
     </div>
   );
 };

@@ -6,7 +6,7 @@ import RestaurantCategeory from "./RestaurantCategeory";
 
 const RestaurantMenu = () => {
 
-  const data="DummyData"
+  const data="prop drilling"
 
   const { resId } = useParams();
 

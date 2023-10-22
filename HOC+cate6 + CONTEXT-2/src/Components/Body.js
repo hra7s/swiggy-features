@@ -1,9 +1,9 @@
 import React from "react";
-import { useState, useEffect,useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 // import resList from "../utils/mockData"
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
-import RestaurentCard, {withVegLabel} from "./RestaurantCard";
+import RestaurentCard, { withVegLabel } from "./RestaurantCard";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 
@@ -17,13 +17,12 @@ const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
 
- const {loggedInUser,setUserInfo} =useContext(UserContext)
+  const { loggedInUser, setUserInfo } = useContext(UserContext);
 
-  const RestaurentCardVeg= withVegLabel(RestaurentCard)
+  const RestaurentCardVeg = withVegLabel(RestaurentCard);
 
   useEffect(() => {
     fetchData();
-   
   }, []);
 
   const fetchData = async () => {
@@ -31,8 +30,6 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.385044&lng=78.486671&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const data_one = await data.json();
-
-
 
     // console.log(data_one?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     setListOfRestaurant(
@@ -44,8 +41,6 @@ const Body = () => {
         ?.restaurants
     );
   };
-
-
 
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false)
@@ -69,7 +64,8 @@ const Body = () => {
               setSearchText(e.target.value);
             }}
           />
-          <button className="px-4 m-4 py-1 rounded-lg bg-blue-300"
+          <button
+            className="px-4 m-4 py-1 rounded-lg bg-blue-300"
             onClick={() => {
               const filteredRestaurant = listOfRestaurant.filter((res) =>
                 res.info.name.toUpperCase().includes(searchText.toUpperCase())
@@ -82,34 +78,45 @@ const Body = () => {
             Search
           </button>
         </div>
-<div className="m-4 p-4 flex items-center">
-<button
-          className="px-4 py-2 rounded-2xl bg-blue-200"
-          onClick={() => {
-            console.log("clicked");
-            //filter logic need to write here
-            let filteredList = filteredRestaurant.filter(
-              (resData) => resData?.info?.avgRating >= 4
-            );
-            // setListOfRestaurant(filteredList);
-            setFilteredRestaurant(filteredList);
-            console.log(filteredList);
-          }}
-        >
-          Top Rated Restaurant
-        </button>
-</div>
-       
-       <div className="m-4 p-4 flex items-center">
-       <label>Username</label>
-<input type="text" className="border p-2 border-black" value={loggedInUser} onChange={(e)=>{setUserInfo(e.target.value)}}/>
-</div>
+        <div className="m-4 p-4 flex items-center">
+          <button
+            className="px-4 py-2 rounded-2xl bg-blue-200"
+            onClick={() => {
+              console.log("clicked");
+              //filter logic need to write here
+              let filteredList = filteredRestaurant.filter(
+                (resData) => resData?.info?.avgRating >= 4
+              );
+              // setListOfRestaurant(filteredList);
+              setFilteredRestaurant(filteredList);
+              console.log(filteredList);
+            }}
+          >
+            Top Rated Restaurant
+          </button>
+        </div>
+
+        <div className="m-4 p-4 flex items-center">
+          <label>Username</label>
+          <input
+            type="text"
+            className="border p-2 border-black"
+            value={loggedInUser}
+            onChange={(e) => {
+              setUserInfo(e.target.value);
+            }}
+          />
+        </div>
       </div>
       <div className="flex flex-wrap">
         {/* when ever you are looping you need to pass a key  */}
         {filteredRestaurant.map((restaurant) => (
           <Link to={"./restaurants/" + restaurant?.info?.id}>
-         { restaurant.info.veg ? (<RestaurentCardVeg resData={restaurant} /> ):( <RestaurentCard key={restaurant?.info?.id} resData={restaurant} />)}
+            {restaurant.info.veg ? (
+              <RestaurentCardVeg resData={restaurant} />
+            ) : (
+              <RestaurentCard key={restaurant?.info?.id} resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>

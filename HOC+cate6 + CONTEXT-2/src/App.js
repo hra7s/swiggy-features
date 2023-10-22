@@ -45,8 +45,9 @@ const App= ()=>{
         <UserContext.Provider value={{loggedInUser:userInfo, setUserInfo}}>
               <div className="app">
               
-              <UserContext.Provider value={{loggedInUser:"welcome Phani"}}>
+              <UserContext.Provider value={{loggedInUser:userInfo}}>
               <Header />
+              
               </UserContext.Provider>
              
               

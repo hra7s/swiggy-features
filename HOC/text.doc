@@ -44,6 +44,7 @@ call back function means when we pass a function as an argument to nother functi
 
 
 
+
 let a=[]
 a.map(()=>{}
 map  reduce and filter are higher 
@@ -51,6 +52,8 @@ map  reduce and filter are higher
 
 higher order component 
 
-it takes component as an argument and return another component with enahanced features
+it takes component as an argument and return same component with enahanced features
+
+
 
 
