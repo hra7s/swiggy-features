@@ -21,7 +21,8 @@ const Header = () => {
   }, [btnReact]);
  
   // we are subscribing to store using a hook
-  
+ 
+
   const cartItems= useSelector((store)=>store.cart.items)
   console.log(cartItems)// ["b","c"]
   // const btnReact="Login"

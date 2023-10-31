@@ -7,13 +7,15 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
   const [btnReact, setBtnReact] = useState("Login");
-
+  console.log("above effect")
   const onlineStatus = useOnlineStatus();
 
   //when ever state variable updates react rerenders /
   useEffect(() => {
-    // console.log("useEffect Called");
-  }, [btnReact]);
+    console.log("useEffect Called inside");
+  }, []);
+
+  console.log("below effect")
 
   // const btnReact="Login"
   return (
@@ -51,7 +53,7 @@ const Header = () => {
             {btnReact}
           </button>
         </ul>
-        {/* {console.log("inside header")} */}
+       {console.log("inside header")} 
       </div>
     </div>
   );

@@ -30,3 +30,10 @@ predictable state container for js
 
 REACT-REDUX
 REDUX TOOKIT (RTK)
+
+
+developer can do 
+
+unit testing (each component we can testing it in isolation)
+Integration 
+E2E testing 

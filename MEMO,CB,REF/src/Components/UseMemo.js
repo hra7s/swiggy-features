@@ -6,8 +6,8 @@ const UseMemo = () => {
   const [a, setA] = useState(0);
   const [isDarkTheme, setIsDarkTheme] = useState(false);
   console.log("Rendering..........");
-  const prime =()=> findNthPrime(a);
-  //const prime =useMemo(()=> findNthPrime(a),[a]);
+  //const prime =()=> findNthPrime(a);
+ const prime =useMemo(()=> findNthPrime(a),[a]);
   console.log(prime)
   return (
     <div

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import RestaurentCard, {withVegLabel} from "./RestaurantCard";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
-import Banner from "./Banner";
+
 
 // chucking
 //code splitting
@@ -37,11 +37,11 @@ const Body = () => {
 
     // console.log(data_one?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     setListOfRestaurant(
-      data_one.data.cards[2]?.card?.card?.gridElements?.infoWithStyle
+      data_one.data.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
     setFilteredRestaurant(
-      data_one.data.cards[2]?.card?.card?.gridElements?.infoWithStyle
+      data_one.data.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
   };
@@ -59,7 +59,7 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-     <Banner/>
+     {/* <Banner/> */}
       <div className="flex">
      
         <div className="m-4 p-4">

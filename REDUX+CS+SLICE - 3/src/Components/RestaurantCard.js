@@ -19,7 +19,7 @@ const RestaurentCard=(props)=>{
             <h3>{costForTwo}</h3>
             <h4>{sla?.deliveryTime} minutes</h4>
             <h6>{loggedInUser}</h6>
-            <h6>cart- {cartItems.length}</h6>
+            {/* <h6>cart- {cartItems.length}</h6> */}
             </div>
         )
    

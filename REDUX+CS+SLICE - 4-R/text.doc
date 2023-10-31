@@ -30,3 +30,9 @@ predictable state container for js
 
 REACT-REDUX
 REDUX TOOKIT (RTK)
+
+
+
+class component --> stateful component 
+
+functional component  --> stateless component up to 16.8 version (hooks) with the help of hooks functional component becomes stateful components  

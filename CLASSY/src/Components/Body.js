@@ -127,7 +127,7 @@ const Body = () => {
         {/* when ever you are looping you need to pass a key  */}
         {filteredRestaurant.map((restaurant) => (
           <Link to={"./restaurants/" + restaurant?.info?.id}>
-         { restaurant.info.veg ? (<RestaurentCardVeg key={restaurant.info.i} resData={restaurant} /> ):( <RestaurentCard key={restaurant?.info?.id} resData={restaurant} />)}
+         { restaurant.info.veg ? (<RestaurentCardVeg key={restaurant.info.id} resData={restaurant} /> ):( <RestaurentCard key={restaurant?.info?.id} resData={restaurant} />)}
           </Link>
         ))}
       </div>

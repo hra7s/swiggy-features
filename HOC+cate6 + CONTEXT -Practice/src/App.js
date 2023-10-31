@@ -39,10 +39,10 @@ const App= ()=>{
     return (
         <UserContext.Provider value={{loggedInUser:userInfo}}>
         <div className="app">
-         <UserContext.Provider value={{loggedInUser:"welcome to Food"}}>  
+          <UserContext.Provider value={{loggedInUser:"welcome to Phani"}}>   
         <Header />
       
-     </UserContext.Provider> 
+      </UserContext.Provider>   
       
    
         <Outlet />
