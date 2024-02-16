@@ -9,11 +9,13 @@ const Header = () => {
   const [btnReact, setBtnReact] = useState("Login");
   const onlineStatus = useOnlineStatus();
 
+  console.log("above useEffect")
   //when ever state variable updates react rerenders /
   useEffect(() => {
-    console.log("useEffect Called");
-  }, [btnReact]);
+    console.log("inside useEffect Called");
+  },[btnReact]);
 
+  console.log("Below use effect")
   // const btnReact="Login"
   return (
     <div className="header">
@@ -22,7 +24,7 @@ const Header = () => {
       </div>
       <div className="navItems">
         <ul>
-          <li>Online Status :{onlineStatus ? "🟢" : "🔴"}</li>
+          <li>Online Status :{onlineStatus ? "🤑" : "🔴😡"}</li>
 
           <li>
            
@@ -51,7 +53,7 @@ const Header = () => {
             {btnReact}
           </button>
         </ul>
-        {console.log("inside header")}
+        {console.log("intial render")}
       </div>
     </div>
   );

@@ -37,17 +37,16 @@ const Body = () => {
 
     // console.log(data_one?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     setListOfRestaurant(
-      data_one.data.cards[2]?.card?.card?.gridElements?.infoWithStyle
+      data_one.data.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
     setFilteredRestaurant(
-      data_one.data.cards[2]?.card?.card?.gridElements?.infoWithStyle
+      data_one.data.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
   };
 
-
-
+  
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false)
     return (

@@ -20,3 +20,13 @@ chuncking
 code splitting 
 dynamic bundling 
 lazy loading 
+\\
+
+
+APP 
+     -- HEADER
+     -- BODY 
+          --- RESTAURANT CARD 
+                 -- RESMENU 
+                       -- CATEGEROY 
+                             -->LIST OF ITEMS

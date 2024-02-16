@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { CDN_URL } from "../utils/constants";
 const ItemList = ({ items,dummy }) => {
   console.log(dummy)
@@ -39,3 +39,23 @@ const ItemList = ({ items,dummy }) => {
 };
 
 export default ItemList;
+
+
+
+
+// functional component 
+// normal js function which return jsx 
+
+
+// Hook 
+// Hook is a normal js utility function 
+// useState useEffect 
+
+//useState // with the help of useState, we can manage component state 
+
+// useEffect 
+
+// perform side effects of the component 
+
+// api calls , dom operations schedulers , 
+

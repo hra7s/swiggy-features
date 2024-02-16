@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import { CDN_URL } from "../utils/constants"
 
 const RestaurentCard=(props)=>{
@@ -19,19 +19,6 @@ const RestaurentCard=(props)=>{
    
 }
 
-// export const withVegLabel=(RestaurantCard)=>{
-
-//     return (props)=>{
-  
-//       return (
-//         <div>
-//           <label>Veg</label>
-//           <RestaurantCard {...props}/>
-//         </div>
-//       )
-  
-//     }
-//   }
 
 
 export const withVegLabel= (RestaurentCard)=>{
@@ -40,6 +27,7 @@ export const withVegLabel= (RestaurentCard)=>{
         return(
             <div>
             <label className="absolute bg-green-400 text-black m-2 p-2 rounded-lg">Veg</label>
+
             <RestaurentCard {...props}/>
 
             </div>
@@ -49,4 +37,15 @@ export const withVegLabel= (RestaurentCard)=>{
 }
 
 
+
+
 export default RestaurentCard
+
+
+
+
+
+
+
+
+

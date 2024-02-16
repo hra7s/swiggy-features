@@ -32,7 +32,7 @@ const App= ()=>{
     useEffect(()=>{
 
         const data={
-            name:"welcome Phani"
+            name:"welcome React"
         }
 
         setUserInfo(data.name)

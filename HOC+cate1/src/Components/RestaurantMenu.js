@@ -47,7 +47,7 @@ const resInfo= useRestaurantMenu(resId)
 
 
 const categories= resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((each)=>each.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
-console.log(categories)
+console.log("categories:",categories)
 
 
   return  (resInfo===null)?<Shimmer/>:(
@@ -56,7 +56,7 @@ console.log(categories)
            <h1 className='font-bold my-5 text-2xl'>{name}</h1>
            <h2 className='font-bold'>{cuisines.join(",")}</h2>
            <p className='font-bold'>{costForTwoMessage}</p>
-             {categories.map((category)=> <RestaurantCategeory data={category.card.card}/> )}  
+             {categories.map((category)=> <RestaurantCategeory data={category}/> )}  
             
            
            

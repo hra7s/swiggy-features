@@ -17,7 +17,7 @@ const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
 
-  console.log(listOfRestaurant)
+ // console.log(listOfRestaurant)
 
   const RestaurentCardVeg= withVegLabel(RestaurentCard)
 
@@ -46,15 +46,15 @@ const Body = () => {
     );
     const data_one = await data.json();
 
-    console.log(data_one);
+   // console.log(data_one);
 
     // console.log(data_one?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     setListOfRestaurant(
-      data_one.data.cards[2]?.card?.card?.gridElements?.infoWithStyle
+      data_one.data.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
     setFilteredRestaurant(
-      data_one.data.cards[2]?.card?.card?.gridElements?.infoWithStyle
+      data_one.data.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
   };
@@ -127,7 +127,7 @@ const Body = () => {
         {/* when ever you are looping you need to pass a key  */}
         {filteredRestaurant.map((restaurant) => (
           <Link to={"./restaurants/" + restaurant?.info?.id}>
-         { restaurant.info.veg ? (<RestaurentCardVeg resData={restaurant} /> ):( <RestaurentCard key={restaurant?.info?.id} resData={restaurant} />)}
+         { restaurant.info.veg ? (<RestaurentCardVeg key={restaurant?.info?.id} resData={restaurant} /> ):( <RestaurentCard key={restaurant?.info?.id} resData={restaurant} />)}
           </Link>
         ))}
       </div>

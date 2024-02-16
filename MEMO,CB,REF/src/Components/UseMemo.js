@@ -6,8 +6,8 @@ const UseMemo = () => {
   const [a, setA] = useState(0);
   const [isDarkTheme, setIsDarkTheme] = useState(false);
   console.log("Rendering..........");
-  //const prime =()=> findNthPrime(a);
- const prime =useMemo(()=> findNthPrime(a),[a]);
+//const prime =()=> findNthPrime(a)
+ const prime =useMemo(()=> findNthPrime(a),[a]); 
   console.log(prime)
   return (
     <div
@@ -20,14 +20,14 @@ const UseMemo = () => {
     </div>
       <div>
         <input
-          className="border border-black w-72 p-2"
+          className="border text-blue-400 border-black w-72 p-2"
           type="number"
           value={a}
           onChange={(e) => setA(e.target.value)}
         />
       </div>
       <div>
-        <h1>nth Prime : {prime}</h1>
+        <h1 className="text-red-400">nth Prime : {prime}</h1>
       </div>
       UseMemo
     </div>

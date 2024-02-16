@@ -41,13 +41,13 @@ const RestaurantMenu = () => {
       </p>
       {categories.map((category,index) => (
 
-        // here restaurantcategeory is controlled by res menu . so rescate is called controlled component
-        // rescat is uncontrolled component  when it maintains it their own state
-        <RestaurantCategeory
+        // here restaurantcategeory is controlled by res menu . so rescateogeory is called controlled component
+        // rescategeory is uncontrolled component  when it maintains it their own state
+        <RestaurantCategeory 
           key={category.card.card.title}
           data={category.card.card}
-          //showItem={index===5? true: false }
-       showItem={index===showIndex? true:false}
+         // showItem={index===4? true: false }
+          showItem={index===showIndex? true:false}
          setShowIndex={()=>setShowIndex(index)}
         />
       ))}
@@ -56,5 +56,6 @@ const RestaurantMenu = () => {
 };
 
 export default RestaurantMenu;
+
 
 

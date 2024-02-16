@@ -2,8 +2,8 @@ import React from "react"
 import { CDN_URL } from "../utils/constants"
 
 const RestaurentCard=(props)=>{
-    const {resData} =props
-    const {cloudinaryImageId,name,avgRating,cuisines,costForTwo,sla}= resData?.info
+    // const {resData} =props
+    const {cloudinaryImageId,name,avgRating,cuisines,costForTwo,sla}= props.resData?.info
     //optional chaining
         return (
             <div className='res-card' style={{backgroundColor : "#f0f0f0" }}>

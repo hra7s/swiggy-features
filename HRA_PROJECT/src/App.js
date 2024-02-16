@@ -6,28 +6,29 @@ import Menu from './Components/Menu';
 //import About from './Components/About';
 import {createBrowserRouter,Outlet,RouterProvider} from 'react-router-dom';
 import '../index.css'
-// import Contact from './Components/Contact';
+//import Contact from './Components/Contact';
 import Error from './Components/Error';
 import RestaurantMenu from './Components/RestaurantMenu';
 import RestaurentCard from './Components/RestaurantCard';
 //import Grocery from './Components/Grocery'
 
-
+const Grocery= lazy(()=>import("./Components/Grocery"))
+const About= lazy(()=>import("./Components/About"))
+const Contact =lazy(()=>import("./Components/Contact"))
 //chuncking 
 //code splitting
 // dynamic loading 
 // 
 // // 
-const Grocery=lazy(()=> import("./Components/Grocery.js"));
+// const Grocery=lazy(()=> import("./Components/Grocery.js"));
 
-const About=lazy(()=> import("./Components/About.js"));
 
-const Contact=lazy(()=>import("./Components/Contact"))
 
 const App= ()=>{
     return (
         <div className="app">
         <Header />
+        {/* <Body/> */}
         <Outlet />
         </div>
     )
@@ -44,16 +45,17 @@ const App= ()=>{
             {
                 path:'/about',
                 //element : <About/>
-                element:<Suspense fallback={<h1>Loading...hi .</h1>}><About/></Suspense>
+                element:<Suspense><About/></Suspense>
             },
             {
                 path:'/contact',
-                element : <Suspense fallback={<h1>Loading contacts</h1>}><Contact/></Suspense>
+                //element: <Contact/>
+                element : <Contact/>
             },
             {
                 path:"/grocery",
                 //element:<Grocery/>,
-                 element:<Suspense fallback={<h1>Loading..hi..</h1>}><Grocery/></Suspense> 
+                element:<Suspense fallback={<h1>Loading..hi..</h1>}><Grocery/></Suspense> 
             },
             {
                 path:"/restaurants/:resId",
@@ -63,6 +65,7 @@ const App= ()=>{
         errorElement : <Error />
     },
    
+
 
 
 ])

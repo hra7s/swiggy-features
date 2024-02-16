@@ -12,7 +12,7 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 //lazy loading
 
 const Body = () => {
-  const [listOfRestaurant, setListOfRestaurant] = useState();
+  const [listOfRestaurant, setListOfRestaurant] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
 
@@ -45,11 +45,11 @@ const Body = () => {
 
     // console.log(data_one?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     setListOfRestaurant(
-      data_one.data.cards[2]?.card?.card?.gridElements?.infoWithStyle
+      data_one.data.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
     setFilteredRestaurant(
-      data_one.data.cards[2]?.card?.card?.gridElements?.infoWithStyle
+      data_one.data.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
   };
@@ -91,8 +91,8 @@ const Body = () => {
               const filteredRestaurant = listOfRestaurant.filter((res) =>
                 res.info.name.toUpperCase().includes(searchText.toUpperCase())
               );
-              //setListOfRestaurant(filteredRestaurant)
-              setFilteredRestaurant(filteredRestaurant);
+              setListOfRestaurant(filteredRestaurant)
+              //setFilteredRestaurant(filteredRestaurant);
               console.log(filteredRestaurant);
             }}
           >

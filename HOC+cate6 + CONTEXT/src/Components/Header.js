@@ -11,8 +11,8 @@ const Header = () => {
 
   const onlineStatus = useOnlineStatus();
 
-  //useContext is used to acces the data from gobal store
-  const {loggedInUser}=useContext(Abc)
+  //useContext is used to acces the data from global store
+  const {loggedInUser,user}=useContext(Abc)
   console.log(loggedInUser)
   //when ever state variable updates react rerenders /
   useEffect(() => {
@@ -54,7 +54,7 @@ const Header = () => {
           >
             {btnReact}
           </button>
-           <li className="px-4">{loggedInUser}</li> 
+           <li className="px-4">{loggedInUser},{user}</li> 
         </ul>
         {/* {console.log("inside header")} */}
       </div>

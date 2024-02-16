@@ -15,6 +15,10 @@ testable
 
 // custom hooks 
 
+// 
+
+
+we need to finalize the contract (what is the input and what is the output in return )
 
 chuncking
 code splitting 
@@ -72,3 +76,6 @@ need to finalize the contract (what is input and what is output )
 
 
 file watcher algorithm 
+
+
+performance optimization (how to improve application performance) 

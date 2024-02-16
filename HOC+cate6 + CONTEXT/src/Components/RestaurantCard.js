@@ -20,7 +20,6 @@ const RestaurentCard=(props)=>{
         <h6>{loggedInUser}</h6> 
             </div>
         )
-   
 }
 
 // export const withVegLabel=(RestaurantCard)=>{

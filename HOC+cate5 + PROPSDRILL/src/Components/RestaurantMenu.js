@@ -6,7 +6,7 @@ import RestaurantCategeory from "./RestaurantCategeory";
 
 const RestaurantMenu = () => {
 
-  const data="prop drilling"
+  const data="prop drilling " 
 
   const { resId } = useParams();
 
@@ -48,7 +48,7 @@ const RestaurantMenu = () => {
           // showItem={index===1 ? true: false }
           showItem={index===showIndex? true:false}
           setShowIndex={()=>setShowIndex(index)}
-          dummy={data}
+          dummy={data} 
         />
       ))}
     </div>

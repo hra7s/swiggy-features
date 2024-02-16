@@ -1,7 +1,10 @@
 import React from "react";
 import { CDN_URL } from "../utils/constants";
-const ItemList = ({ items }) => {
-  console.log(items);
+import { FaRupeeSign } from "react-icons/fa"; 
+const ItemList = (props) => {
+  const {items} =props
+  console.log(items)
+  
   return (
     <div>
       {items.map((item) => (
@@ -12,11 +15,9 @@ const ItemList = ({ items }) => {
         <div className="w-9/12">
             <div className="py-2">
               <span>{item.card.info.name} </span>
-              <span>
-                💵
-                {item.card.info.price
-                  ? item.card.info.price / 100
-                  : item.card.info.defaultPrice / 100}
+              <span className="flex">
+              <FaRupeeSign className="my-1" /> {item.card.info.price ? item.card.info.price / 100: item.card.info.defaultPrice/100}
+                 
               </span>
             </div>
 
@@ -25,7 +26,7 @@ const ItemList = ({ items }) => {
           <div  className="w-3/12">
           <div > <button className="p-2 mx-16 rounded-lg bg-black text-white shadow-lg absolute ">Add+</button></div>
          {
-             item.card.info.imageId ? <img src={CDN_URL + item.card.info.imageId} className="rounded-2xl" />: <p></p>
+          item.card.info.imageId && <img src={CDN_URL + item.card.info.imageId} className="rounded-2xl" />
          }
           
           </div>

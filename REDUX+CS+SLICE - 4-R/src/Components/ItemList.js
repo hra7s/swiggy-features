@@ -7,11 +7,13 @@ const ItemList = ({ items,dummy }) => {
   
 const dispatch= useDispatch();
 const handleAddItem=(item)=>{
- console.log(item )
+// console.log(item )
   // dispatch an action
   dispatch(addItem(item))
 
 }
+
+//items=[20] ,, items [1] , item [2]
   return (
     <div>
       {items.map((item) => (
@@ -46,3 +48,7 @@ const handleAddItem=(item)=>{
 };
 
 export default ItemList;
+
+
+
+

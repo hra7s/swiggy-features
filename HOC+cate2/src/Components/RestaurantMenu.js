@@ -56,7 +56,7 @@ const categories= resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.c
            <h1 className='font-bold my-5 text-2xl'>{name}</h1>
            <h2 className='font-bold'>{cuisines.join(",")}</h2>
            <p className='font-bold'>{"cost for two : "}{costForTwo/100}</p>
-           {categories.map((category)=><RestaurantCategeory data={category.card.card}/>)}
+           {categories.map((category)=><RestaurantCategeory key={category.card.card.title} data={category.card.card}/>)}
            
            
            

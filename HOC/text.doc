@@ -57,3 +57,95 @@ it takes component as an argument and return same component with enahanced featu
 
 
 
+
+
+let play=()=>{
+
+}
+
+call back function - when we pass a function as an argument to anither function
+
+
+let sum=()=>{
+
+}
+
+sum(play) 
+here sum is higher order function
+
+when we pass a function to another function as an argument and returns another function 
+
+
+
+map(each=>each*7)
+
+
+higher order component -->  a component which takes another component as an argument and returns another component with enhanced features . enhancer 
+
+
+
+
+
+when we pass a function as an argument to another function then it is called hof 
+
+
+
+
+
+
+
+hoc --> a component which takes another component as an argument and returns component with enahnced features 
+
+
+
+
+
+function play(){
+
+}
+
+function sum(){
+
+}
+
+sum(play)
+//when we pass a function as an arugument to another function -it is called callback function 
+
+// Higher order function 
+
+//higher order component --> when we pass a component as an argument to another component and returns acomponent with enhanced features 
+
+
+
+
+
+
+Higher order Component 
+
+A function Which takes a component as a argument and returns a another component with enhanced features .
+Enhancer 
+
+
+const withPromted=(Component)=>{
+    return ()=>{
+        return (
+            <div>
+             <Component/>
+             </div>
+           
+        )
+    }
+
+}
+
+
+=withPromted(Component)
+
+
+a --> A  
+
+
+
+
+
+

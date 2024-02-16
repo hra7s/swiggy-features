@@ -5,7 +5,7 @@ import ItemList from './ItemList'
 const Cart = () => {
      
     const cartItems= useSelector((store)=>store.cart.items)
-    console.log(cartItems)
+    console.log(cartItems) //[itemR. itemB]
   return (
     <div className='text-center ali m-5 p-5'>
     <h1 className='text-2xl font-bold '>

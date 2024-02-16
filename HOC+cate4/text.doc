@@ -20,3 +20,17 @@ chuncking
 code splitting 
 dynamic bundling 
 lazy loading 
+
+
+
+Resmenu (true)
+        Catege (true )
+             itemList 
+        Catege 
+             itemList 
+        Catege 
+             itemList
+            
+
+Uncontrolled Component   -- here restaurant Catege is maintaining its own state 
+Controlled Component --- 

@@ -25,24 +25,23 @@ const About=lazy(()=> import("./Components/About.js"));
 
 const App= ()=>{
   
-    const [userInfo,setUserInfo]= useState()
+    const [userInfo,setUserInfo]= useState("")
 
     useEffect(()=>{
         const data={
-            name:"Hello world"
+            name:"Hello Phani"
         }
 
         setUserInfo(data.name)
 
-    })
+    },[])
 
     return (
-        <UserContext.Provider value={{loggedInUser:userInfo}}>
+        <UserContext.Provider value={{loggedInUser:"Welcome to React"}}>
         <div className="app">
-          <UserContext.Provider value={{loggedInUser:"welcome to Phani"}}>   
+    <UserContext.Provider value={{loggedInUser:userInfo}}>        
         <Header />
-      
-      </UserContext.Provider>   
+      </UserContext.Provider>          
       
    
         <Outlet />

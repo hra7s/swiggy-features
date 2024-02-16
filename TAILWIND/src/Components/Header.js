@@ -17,11 +17,11 @@ const Header = () => {
 
   // const btnReact="Login"
   return (
-    <div className="flex justify-between bg-amber-300 lg:bg-orange-200 shadow-lg ">
+    <div className="flex justify-between bg-blue-200 shadow-2xl">
       <div className="logo">
-        <img alt="data" className="w-32 rounded-xl" src={LOGO_URL} />
+        <img alt="data" className=" w-32 rounded-lg" src={LOGO_URL} />
       </div>
-      <div className="navItems">
+      <div >
         <ul className="flex items-center p-4 m-4">
           <li className="px-4">Online Status :{onlineStatus ? "🟢" : "🔴"}</li>
           <li className="px-4 ">

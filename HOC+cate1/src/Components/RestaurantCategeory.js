@@ -1,13 +1,19 @@
 import React from 'react'
 
-const RestaurantCategeory = ({data}) => {
-    console.log(data)
+const RestaurantCategeory = (props) => {
+  console.log(props)
+const {title,itemCards} = props.data.card.card
+    
   return (
-    <div className="w-6/12 m-auto my-2 shadow-lg flex justify-between p-4 bg-gray-50">
-        <span className='font-bold text-lg'>{data.title} ({data.itemCards.length})</span>
+    <div className=" bg-gray-200 my-2 p-4 flex justify-between w-6/12 m-auto shadow-lg ">
+        <span className='font-bold text-lg'>{title} ({itemCards.length})</span>
         <span>⬇️</span>
+        
     </div>
   )
+
 }
 
 export default RestaurantCategeory
+
+// w-6/12 m-auto my-2 shadow-lg flex justify-between p-4 bg-red-100

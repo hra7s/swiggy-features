@@ -42,7 +42,7 @@ const resInfo= useRestaurantMenu(resId)
 
 
   const { name,cuisines,costForTwo} =resInfo?.data.cards[0]?.card?.card?.info
-console.log(resInfo)
+// console.log(resInfo)
 
    const {itemCards}= resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 console.log(itemCards)
