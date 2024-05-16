@@ -9,7 +9,7 @@ const dispatch= useDispatch();
 const handleAddItem=(item)=>{
 // console.log(item )
   // dispatch an action
-  dispatch(addItem(item))
+  dispatch(addItem(item))  //[{},{},{}]
 
 }
 
@@ -52,3 +52,8 @@ export default ItemList;
 
 
 
+// <button onClick={fetchData}>Login</button>
+
+// <button onClick={fetchData()}>Login</button>
+
+// <button onClick={()=>fetchData()}>Login</button>

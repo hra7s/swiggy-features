@@ -6,8 +6,8 @@ import { FaArrowUp } from "react-icons/fa";
 const RestaurantCategeory = ({data}) => {
   const [showItem,setShowItems]= useState(false)
  const handleItems=()=>{
- //setShowItems(true)
-setShowItems(!showItem) //showItem=false , showItem= true 
+ setShowItems(true)
+//setShowItems(!showItem) //showItem=false , showItem= true 
 //console.log("clicked")
  }
   return (

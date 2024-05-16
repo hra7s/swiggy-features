@@ -19,7 +19,6 @@ const Body = () => {
   console.log(listOfRestaurant);
 
   const RestaurentCardVeg = withVegLabel(RestaurentCard);
-
   useEffect(() => {
     fetchData();
     // fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=17.385044&lng=78.486671")
@@ -144,4 +143,17 @@ export default Body;
 
 
 
+
+
+
+
+function play(component){
+  return  (a,b)=>{
+
+
+    console.log(a+b)
+
+  }
+
+}
 

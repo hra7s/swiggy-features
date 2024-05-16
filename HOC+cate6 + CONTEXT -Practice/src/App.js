@@ -29,7 +29,7 @@ const App= ()=>{
 
     useEffect(()=>{
         const data={
-            name:"Hello Phani"
+            name:"Hello Ramya"
         }
 
         setUserInfo(data.name)
@@ -37,11 +37,11 @@ const App= ()=>{
     },[])
 
     return (
-        <UserContext.Provider value={{loggedInUser:"Welcome to React"}}>
+        <UserContext.Provider value={{loggedInUser:"Restaurant"}}>
         <div className="app">
-    <UserContext.Provider value={{loggedInUser:userInfo}}>        
+     <UserContext.Provider value={{loggedInUser:userInfo}}>          
         <Header />
-      </UserContext.Provider>          
+          </UserContext.Provider>          
       
    
         <Outlet />
@@ -50,6 +50,8 @@ const App= ()=>{
         
     )
 }
+
+
  const appRouter= createBrowserRouter([
    {
         path:'/',

@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import RestaurentCard, { withVegLabel } from "./RestaurantCard";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import Dummy from "./Dummy";
+
 
 // chucking
 //code splitting
@@ -54,6 +56,7 @@ const Body = () => {
   ) : (
     <div className="body">
       <div className="flex">
+      <Dummy/>
         <div className="m-4 p-4">
           <input
             type="text"

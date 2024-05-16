@@ -13,8 +13,8 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
 
-
   const {loggedInUser}=useContext(UserContext)
+
   //when ever state variable updates react rerenders /
   useEffect(() => {
     // console.log("useEffect Called");

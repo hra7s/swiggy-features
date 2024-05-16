@@ -1,9 +1,9 @@
 import React from "react";
 import ItemList from "./ItemList";
 
-const RestaurantCategeory = ({ data }) => {
+const RestaurantCategeory = (props) => {
   //console.log(data)
-
+const {itemCards,title}= props.data.card.card
   const handleClick=()=>{
     console.log("clicked")
   }
@@ -12,12 +12,12 @@ const RestaurantCategeory = ({ data }) => {
     <div className="w-6/12 mx-auto my-4  bg-gray-50 shadow-lg p-4 ">
       <div className="flex justify-between " onClick={handleClick}>
         <span className="font-bold text-lg">
-          {data.title} ({data.itemCards.length})
+          {title} ({itemCards.length})
         </span>
         <span>⬇️</span>
       </div>
 
-     <ItemList items={data.itemCards} />   
+     <ItemList items={itemCards} />    
     </div>
   );
 };

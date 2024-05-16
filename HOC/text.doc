@@ -149,3 +149,23 @@ a --> A
 
 
 
+
+
+Higher order component --> 
+
+A function which takes argument as a Component and returns another Component with enhanaced features 
+
+const Abc=(<Component/>)=>{
+
+    return ()=>{
+        return (
+            <div></div>
+        )
+    }   //additional features 
+
+}
+
+Abc(<Component/>)
+
+
+

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, Component } from "react";
 
 const UseRef = () => {
   const [y, setY] = useState(0);
@@ -46,10 +46,30 @@ const UseRef = () => {
         >
           Increase
         </button>
-        <h1 className="font-bold"> Ref = {ref.current}</h1>
+        <h1 className="font-bold">Ref -{ref.current}  </h1>
       </div>
     </div>
   );
 };
 
 export default UseRef;
+
+
+
+
+
+
+
+// const withLable=(Component)=>{
+
+//   return (props)=>{
+
+//     return (
+//       //add features
+//       <Component {...props} />
+//     )
+//   }
+
+// }
+
+// const Label=withLable(Component)

@@ -6,7 +6,7 @@ import RestaurantCategeory from "./RestaurantCategeory";
 
 const RestaurantMenu = () => {
 
-  const data="prop drilling " 
+  const data="prop drilling" 
 
   const { resId } = useParams();
 
@@ -21,11 +21,11 @@ const RestaurantMenu = () => {
   if (resInfo === null) return <Shimmer />;
 
   const { name, cuisines, costForTwo } =
-    resInfo?.data.cards[0]?.card?.card?.info;
+    resInfo?.data.cards[2]?.card?.card?.info;
   console.log(resInfo);
 
   const categories =
-    resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
         c.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"

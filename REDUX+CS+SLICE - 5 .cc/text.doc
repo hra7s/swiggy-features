@@ -30,3 +30,16 @@ predictable state container for js
 
 REACT-REDUX
 REDUX TOOKIT (RTK)
+
+
+
+
+
+
+
+onClick={handleItems}
+
+onClick={()=>{handleItems()}}
+
+onClick={()=>{handleItems(item)}}
+

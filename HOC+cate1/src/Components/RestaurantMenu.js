@@ -17,37 +17,17 @@ const RestaurantMenu = () => {
 const resInfo= useRestaurantMenu(resId) 
 
 
-//     useEffect(()=>{
-// fetchMenu();
-//     },[])
-
-
-    // if (resInfo.length===0){
-    //     return <Shimmer />
-    // }
-
-
-    // const fetchMenu=async()=>{
-    //   console.log(MENU_URL+resId)
-    //     const data= await fetch( MENU_URL+resId);
-       
-    //     const json = await data.json();
-    //     console.log(json)
-    //     setResInfo(json)
-
-
-    // }
 
 
     if (resInfo===null) return <Shimmer/>;
 
 
-  const { name,cuisines,costForTwoMessage} =resInfo?.data.cards[0]?.card?.card?.info
+  const { name,cuisines,costForTwoMessage} =resInfo?.data.cards[2]?.card?.card?.info
 //console.log(resInfo)
 
 
-const categories= resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((each)=>each.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
-console.log("categories:",categories)
+const categories= resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((each)=>each.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
+ console.log("categories:",categories)
 
 
   return  (resInfo===null)?<Shimmer/>:(
@@ -56,11 +36,7 @@ console.log("categories:",categories)
            <h1 className='font-bold my-5 text-2xl'>{name}</h1>
            <h2 className='font-bold'>{cuisines.join(",")}</h2>
            <p className='font-bold'>{costForTwoMessage}</p>
-             {categories.map((category)=> <RestaurantCategeory data={category}/> )}  
-            
-           
-           
-           
+              {categories.map((category)=> <RestaurantCategeory data={category}/> )}  
     </div>
   )
 }
@@ -70,5 +46,9 @@ console.log("categories:",categories)
 
 
 export default RestaurantMenu
+
+
+
+
 
 

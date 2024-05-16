@@ -14,7 +14,7 @@ const Cart = () => {
      <div className='w-6/12 m-auto'>
 
      <button className='p-2 m-2 bg-black text-w rounded-lg'>Clear Item</button>
-        <ItemList items={cartItems}/>
+        <ItemList items={cartItems}/> //[{},{},{}]
     </div> 
         
     </div>

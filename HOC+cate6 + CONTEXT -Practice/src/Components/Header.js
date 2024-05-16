@@ -53,6 +53,7 @@ const Header = () => {
             {btnReact}
           </button>
           <li className="px-4">{loggedInUser}</li>
+          
         </ul>
         {/* {console.log("inside header")} */}
       </div>

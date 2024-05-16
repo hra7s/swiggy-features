@@ -17,7 +17,8 @@ const RestaurentCard=(props)=>{
            
             <h3>{costForTwo}</h3>
             <h4>{sla?.deliveryTime} minutes</h4>
-        <h6>{loggedInUser}</h6> 
+            <h5>{loggedInUser}</h5>
+         
             </div>
         )
 }

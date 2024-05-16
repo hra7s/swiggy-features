@@ -20,3 +20,16 @@ chuncking
 code splitting 
 dynamic bundling 
 lazy loading 
+
+
+
+
+
+const Head=({a,b})=>{
+    console.log(props.a)
+
+}
+
+
+
+<Head a={"hell0"} b={x}/>

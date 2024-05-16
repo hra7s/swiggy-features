@@ -8,9 +8,11 @@ const BannerCard = (props) => {
 
   return (
     <div>
-         <img className='w-96  rounded-2xl p-4 m-4 h-64' src={CDN_URL+imageId}/> 
+         <img className=' w-36  rounded-2xl m-2 p-2  h-36' src={CDN_URL+imageId}/> 
     </div>
   )
 }
 
 export default BannerCard
+
+

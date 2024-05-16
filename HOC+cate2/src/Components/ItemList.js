@@ -1,6 +1,9 @@
 import React from "react";
 import { CDN_URL } from "../utils/constants";
-import { FaRupeeSign } from "react-icons/fa"; 
+import { BsFillCreditCard2BackFill } from "react-icons/bs";
+
+// import { FaRupeeSign } from "react-icons/fa"; 
+import { TbCoinRupeeFilled } from "react-icons/tb";
 const ItemList = (props) => {
   const {items} =props
   console.log(items)
@@ -16,7 +19,8 @@ const ItemList = (props) => {
             <div className="py-2">
               <span>{item.card.info.name} </span>
               <span className="flex">
-              <FaRupeeSign className="my-1" /> {item.card.info.price ? item.card.info.price / 100: item.card.info.defaultPrice/100}
+              <BsFillCreditCard2BackFill />
+              <TbCoinRupeeFilled className="my-1" /> {item.card.info.price ? item.card.info.price / 100: item.card.info.defaultPrice/100}
                  
               </span>
             </div>
